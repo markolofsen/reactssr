@@ -1,0 +1,49 @@
+/*
+@import '../../style/global/global.scss';
+ */
+
+.headerWrapper {
+  /*
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   & [data-css="li-headerlogo"] {
+
+   }
+   & [data-css="li-toolbar"] {
+
+   }
+   */
+}
+
+
+[data-css="li-headerlogo"] {
+  min-width: 320px;
+  max-width: 320px;
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+
+  & a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    @include screen(max, md) {
+      margin-left: 15px;
+    }
+
+    & sup {
+      font-size: 12px;
+      @include screen(max, xs) {
+        display: none;
+      }
+    }
+  }
+}
+
+[data-menu-drawer] {
+  & a {
+    text-decoration: none;
+  }
+}
