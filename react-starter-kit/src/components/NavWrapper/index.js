@@ -84,12 +84,10 @@ const styles = theme => ({
 		}
 	},
 	toolbar: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'flex-end',
 		padding: '0 8px',
 		...theme.mixins.toolbar
 	},
+
 	content: {
 		flexGrow: 1,
 		backgroundColor: theme.palette.background.default,
@@ -150,11 +148,11 @@ class MiniDrawer extends React.Component {
 
 		return (
 			<div className={classes.root}>
-				<AppBar position="fixed" className={classNames(classes.appBar)}>
+				<AppBar position="fixed" className={classes.appBar}>
 					<Toolbar disableGutters={!this.props.config.menu_left} className={classes.guttersWrapper}>
 						<ul className={s.headerWrapper}>
-							<li data-css="li-headerlogo">
-								<IconButton color="inherit" aria-label="open drawer" onClick={this.handleDrawerOpen} className={classNames(classes.menuButton)}>
+							<li cassName={s.li_headerlogo} data-css="li-headerlogo">
+								<IconButton color="inherit" aria-label="open drawer" onClick={this.handleDrawerOpen} className={classes.menuButton}>
 									<Icon>menu_icon</Icon>
 								</IconButton>
 								<Typography variant="title" color="inherit" noWrap>
@@ -176,12 +174,11 @@ class MiniDrawer extends React.Component {
 				}} open={this.props.config.menu_left}>
 
 					<div className={classes.toolbar}>
-						{true == false &&
-							<IconButton onClick={this.handleDrawerClose}>
+						<IconButton onClick={this.handleDrawerClose}>
 							{theme.direction === 'rtl'
 								? <Icon>chevron_right_icon</Icon>
 								: <Icon>chevron_left_icon</Icon>}
-						</IconButton>}
+						</IconButton>
 						<Divider/>
 						<LeftMenu />
 

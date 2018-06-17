@@ -19,7 +19,7 @@ import Preloader from '../../Preloader';
 
 const _ = require('lodash');
 
-import style from './theme.scss'
+import s from './theme.scss'
 
 class MenuGenerator extends React.Component {
 
@@ -114,7 +114,7 @@ const styles = theme => ({
 	root: {
 		width: '100%',
 		maxWidth: 360,
-		background: theme.palette.background.paper
+		background: theme.palette.background.paper,
 	},
 	nested: {
 		paddingLeft: theme.spacing.unit * 4
@@ -204,7 +204,7 @@ class MenuComponent extends React.Component {
 
 		// if (config.site_settings.catalog_menu) {
 			return (
-				<div className={style.leftMenu}>
+				<div className={s.leftMenu}>
 					<MenuGenerator data={menu_public} label="Menu" {...this.props}/>
 					<Divider/>
 				</div>
@@ -225,4 +225,4 @@ export default connect((mapStateToProps) => (mapStateToProps), dispatch => ({
 	onToggleLeftMenu: (payload) => {
 		dispatch({type: 'LEFT_MENU_TOGGLE', payload})
 	}
-}))(withStyles(styles)(MenuComponent));
+}))(withStyles(s)(MenuComponent));

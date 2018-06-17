@@ -24,22 +24,25 @@
   flex-wrap: nowrap;
   display: flex;
   align-items: center;
+  color: #fff;
 
-  & a {
+  a {
     color: #fff;
     margin-left: 20px;
     text-decoration: none;
     @include screen(max, md) {
       margin-left: 15px;
     }
+  }
 
-    & sup {
-      font-size: 12px;
-      @include screen(max, xs) {
-        display: none;
-      }
+  sup {
+    font-size: 12px;
+    margin-left: 10px;
+    @include screen(max, xs) {
+      display: none;
     }
   }
+
 }
 
 [data-menu-drawer] {

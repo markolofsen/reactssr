@@ -3,12 +3,14 @@
 .leftMenu {
   overflow-y: auto;
   max-height: calc(100vh - var(--topmenu-height));
+  /*
   @include screen(min, md) {
     position: fixed;
     z-index: 99;
     overflow: hidden;
     width: 71px;
   }
+   */
 
   a {
     text-decoration: none;
@@ -22,6 +24,7 @@
     }
   }
 }
+
 
 [data-menu-drawer="active"] {
   & .leftMenu {
